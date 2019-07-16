@@ -1,0 +1,26 @@
+﻿  CBoid.cpp
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\cboid.cpp(44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\cboid.cpp(45): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\cboid.cpp(202): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\cboid.cpp(233): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\cboid.cpp(254): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\cboid.cpp(359): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\cboid.cpp(361): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\cboid.cpp(377): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\cboid.cpp(377): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\main.cpp(68): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\main.cpp(90): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\main.cpp(93): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\main.cpp(127): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\main.cpp(133): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\main.cpp(148): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\main.cpp(153): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\main.cpp(154): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\ia_robertocharreton\iaproyect\iaproyect\main.cpp(272): warning C4244: 'initializing': conversion from '_Rep' to 'float', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+  Generating Code...
+  IAProyect.vcxproj -> C:\Users\personal\Documents\GitHub\IA_RobertoCharreton\IAProyect\x64\Debug\IAProyect.exe

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ckUtilities">
+      <UniqueIdentifier>{2ee268c9-6fbd-433c-88e0-32faa86a1fd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ckUtilities">
+      <UniqueIdentifier>{64e767f2-66da-4073-ac11-28525527df52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ckCore">
+      <UniqueIdentifier>{d92299b7-2910-48ad-84bd-3ea5f35c8104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ckCore">
+      <UniqueIdentifier>{56095fdc-3214-42d3-bf16-f4394487d93b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ckTools">
+      <UniqueIdentifier>{7ffa4979-c554-49b7-8afc-47c962fcab46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ckTools">
+      <UniqueIdentifier>{8ba34805-d66c-404c-bfd3-e6fff68b98dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CShapes.cpp">
+      <Filter>Source Files\ckUtilities</Filter>
+    </ClCompile>
+    <ClCompile Include="CText.cpp">
+      <Filter>Source Files\ckUtilities</Filter>
+    </ClCompile>
+    <ClCompile Include="CTexture.cpp">
+      <Filter>Source Files\ckUtilities</Filter>
+    </ClCompile>
+    <ClCompile Include="CMathCHK.cpp">
+      <Filter>Source Files\ckUtilities</Filter>
+    </ClCompile>
+    <ClCompile Include="CBoid.cpp">
+      <Filter>Source Files\ckCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CManager.cpp">
+      <Filter>Source Files\ckCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CLevelEditor.cpp">
+      <Filter>Source Files\ckTools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CShapes.h">
+      <Filter>Header Files\ckUtilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CText.h">
+      <Filter>Header Files\ckUtilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CTexture.h">
+      <Filter>Header Files\ckUtilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CMathCHK.h">
+      <Filter>Header Files\ckUtilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CBoid.h">
+      <Filter>Header Files\ckCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CManager.h">
+      <Filter>Header Files\ckCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CLevelEditor.h">
+      <Filter>Header Files\ckTools</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
