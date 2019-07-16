@@ -20,6 +20,7 @@ void CShapes::Init(SHAPES shape, sf::Color shapeColor, float radius, float x, fl
 	m_y = y;																	// Set position 'y'
 	m_originX = originX;
 	m_originY = originY;
+	m_shape.Circle.setPosition(m_x, m_y);										                      // Update position of circles
 }
 
 void CShapes::Destroy()
@@ -27,10 +28,10 @@ void CShapes::Destroy()
 
 }
 
-void CShapes::Update()
+void CShapes::Update(Vector2 newPos)
 {
 	m_shape.Circle.setRadius(m_radius);											                      // Update circle radius
-	m_shape.Circle.setPosition(m_x, m_y);										                      // Update position of circles
+	m_shape.Circle.setPosition(newPos.X, newPos.Y);										                      // Update position of circles
 	m_shape.Circle.setOrigin(m_originX, m_originY);
 	m_shape.Circle.setOutlineThickness(2);										                    // Update outline
 	m_shape.Circle.setOutlineColor(m_shapeColor);						            // Update outline color
@@ -40,5 +41,5 @@ void CShapes::Update()
 void CShapes::Render(sf::RenderWindow & Wnd, sf::Transform & transform)
 {
 
-	Wnd.draw(m_shape.Circle,transform);													// Render the shape
+	Wnd.draw(m_shape.Circle);													// Render the shape
 }

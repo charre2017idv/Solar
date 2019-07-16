@@ -2,7 +2,9 @@
 //#include <SFML/Graphics.hpp>
 #include "Header.h"
 #include "CManager.h"
+#include "CUniverse.h"
 
+#include "CTimer.h"
 #define RANGE 50.0f
 float g_speed = 100;
 float g_speedZoom = 0.2;
@@ -26,61 +28,36 @@ sf::Sprite MouseSprite;
  vector<float> planetSize;
  vector<sf::Color> PlanetColor;
 
+ CUniverse SistemaSolar;
+ CTimer Timer;
+
  void zoom(const float &speed);
  void move(const float &speed, const float &dirX, const float &diry);
 
-void EditLevel()
-{
-  
-  _MANAGER.m_TEX[0].Init(
-    BGTex,
-    BGSprite,
-    0, 0, 1, 1, 0, 0,
-    "Textures\\track2.png");
-  int x = sf::Mouse::getPosition(_MANAGER.m_RenderWindow).x;
-  int y = sf::Mouse::getPosition(_MANAGER.m_RenderWindow).y;
-  static bool pressed = false;
-  sf::Vector2i position;
-
-  if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-  {
-    if (!pressed) {
-      cout << x << " : " << y << endl;
-      NodesDatafile.open("NodesDatafile.txt", ios::app);
-      NodesDatafile << x << " : " << y << "@" << endl;
-      NodesDatafile.close();
-      pressed = true;
-      // break;
-    }
-  }
-  else {
-    pressed = false;
-  }
-  for (size_t i = 0; i < _MANAGER.m_TEX.size(); i++)
-  {
-    _MANAGER.m_TEX[i].Update();
-    _MANAGER.m_TEX[i].Render(_MANAGER.m_RenderWindow);
-  }
-}
 
 void update()
 {
-  for (size_t i = 0; i < PlanetCoords.size(); i++)
-	{
-		SHAPES Circle;
-		_MANAGER._SHAPES.Init(
-			Circle, 
-      PlanetColor[i],
-      planetSize[i], 
-      PlanetCoords[i].X, 
-			PlanetCoords[i].Y, 
-      planetSize[i], planetSize[i]);
-    sf::Transform transform;
-    sf::Vector2f vec = { PlanetCoords[i].X, PlanetCoords[i].Y };
-    transform.rotate(45.0f,vec);
-		_MANAGER._SHAPES.Update();
-		_MANAGER._SHAPES.Render(_MANAGER.m_RenderWindow, transform);
-	}
+  SistemaSolar.Update(Timer.GetDeltaTime());
+  SistemaSolar.Render(_MANAGER.m_RenderWindow);
+//   for (size_t i = 0; i < PlanetCoords.size(); i++)
+// 	{
+// 		SHAPES Circle;
+// 		_MANAGER._SHAPES.Init(
+// 			Circle, 
+//       PlanetColor[i],
+//       planetSize[i], 
+//       PlanetCoords[i].X, 
+// 			PlanetCoords[i].Y, 
+//       planetSize[i],
+//       planetSize[i]
+//     );
+// 
+//     sf::Transform transform;
+//     sf::Vector2f vec = { PlanetCoords[i].X, PlanetCoords[i].Y };
+//     transform.rotate(45.0f,vec);
+// 		//_MANAGER._SHAPES.Update();
+// 		_MANAGER._SHAPES.Render(_MANAGER.m_RenderWindow, transform);
+// 	}
 // 	_MANAGER.m_TEX[0].Init(
 // 		BGTex, 
 // 		BGSprite, 
@@ -300,44 +277,46 @@ void EventHandler()
 
 int main()
 {
-  Vector2 sunPos = { 1000,500 };
-  Vector2 mercuryPor = { 579, 0 };
-  Vector2 venusPos = { 1082, 0 };
-  Vector2 earthPos = { 1496, 0 };
-  Vector2 MarsPos = { 2279, 0 };
-  Vector2 jupiterPos = { 7783, 0 };
-	_MANAGER.initWindow();
-	//_MANAGER.Init();
-  /////////////////////////////////////////
-  // Sol
-  PlanetCoords.push_back(sunPos);
-  planetSize.push_back(69.5700f);
-  PlanetColor.push_back(sf::Color(255, 255, 0));
-  /////////////////////////////////////////
-  // Mercurio
-  PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, mercuryPor));
-  planetSize.push_back(.02439f);
-  PlanetColor.push_back(sf::Color(0, 153, 255));
-  /////////////////////////////////////////
-  // Venus
-  PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, venusPos));
-  planetSize.push_back(.06052f);
-  PlanetColor.push_back(sf::Color(255, 102, 0));
-  /////////////////////////////////////////
-  // Tierra
-  PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, earthPos));
-  planetSize.push_back(.06378f);
-  PlanetColor.push_back(sf::Color(51, 204, 51));
-  /////////////////////////////////////////
-  // Marte
-  PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, MarsPos));
-  planetSize.push_back(.03797f);
-  PlanetColor.push_back(sf::Color(255, 0, 0));
-  /////////////////////////////////////////
-  // Jupiter
-  PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, jupiterPos));
-  planetSize.push_back(.71492f);
-  PlanetColor.push_back(sf::Color(255, 204, 0));
+//   Vector2 sunPos = { 1000,500 };
+//   Vector2 mercuryPor = { 579, 0 };
+//   Vector2 venusPos = { 1082, 0 };
+//   Vector2 earthPos = { 1496, 0 };
+//   Vector2 MarsPos = { 2279, 0 };
+//   Vector2 jupiterPos = { 7783, 0 };
+ 	_MANAGER.initWindow();
+  SistemaSolar.Init();
+// 	//_MANAGER.Init();
+//   /////////////////////////////////////////
+//   // Sol
+//   PlanetCoords.push_back(sunPos);
+//   planetSize.push_back(69.5700f);
+//   PlanetColor.push_back(sf::Color(255, 255, 0));
+//   /////////////////////////////////////////
+//   // Mercurio
+//   PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, mercuryPor));
+//   planetSize.push_back(.02439f);
+//   PlanetColor.push_back(sf::Color(0, 153, 255));
+//   /////////////////////////////////////////
+//   // Venus
+//   PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, venusPos));
+//   planetSize.push_back(.06052f);
+//   PlanetColor.push_back(sf::Color(255, 102, 0));
+//   /////////////////////////////////////////
+//   // Tierra
+//   PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, earthPos));
+//   planetSize.push_back(.06378f);
+//   PlanetColor.push_back(sf::Color(51, 204, 51));
+//   /////////////////////////////////////////
+//   // Marte
+//   PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, MarsPos));
+//   planetSize.push_back(.03797f);
+//   PlanetColor.push_back(sf::Color(255, 0, 0));
+//   /////////////////////////////////////////
+//   // Jupiter
+//   PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, jupiterPos));
+//   planetSize.push_back(.71492f);
+//   PlanetColor.push_back(sf::Color(255, 204, 0));
+  Timer.start();
 	float timer = 0;
 	//_MANAGER.m_RenderWindow.setFramerateLimit(60);
 	while (_MANAGER.m_RenderWindow.isOpen())

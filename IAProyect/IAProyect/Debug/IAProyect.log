@@ -1,5 +1,2 @@
-﻿  main.cpp
-c:\users\personal\documents\idv17c\cuatri 6\fisica\solarsystem\iaproyect\iaproyect\main.cpp(8): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\personal\documents\idv17c\cuatri 6\fisica\solarsystem\iaproyect\iaproyect\main.cpp(293): warning C4305: 'argument': truncation from 'double' to 'const float'
-c:\users\personal\documents\idv17c\cuatri 6\fisica\solarsystem\iaproyect\iaproyect\main.cpp(297): warning C4305: 'argument': truncation from 'double' to 'const float'
-  IAProyect.vcxproj -> C:\Users\personal\Documents\IDV17c\Cuatri 6\Fisica\SolarSystem\IAProyect\Debug\IAProyect.exe
+﻿  CBody.cpp
+  IAProyect.vcxproj -> C:\Users\personal\Documents\GitHub\Solar\IAProyect\Debug\IAProyect.exe

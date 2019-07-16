@@ -57,6 +57,24 @@
     <ClCompile Include="CLevelEditor.cpp">
       <Filter>Source Files\ckTools</Filter>
     </ClCompile>
+    <ClCompile Include="CPlanet.cpp">
+      <Filter>Source Files\ckCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CSolarSystem.cpp">
+      <Filter>Source Files\ckCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CSun.cpp">
+      <Filter>Source Files\ckCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CBody.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CUniverse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h">
@@ -82,6 +100,24 @@
     </ClInclude>
     <ClInclude Include="CLevelEditor.h">
       <Filter>Header Files\ckTools</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlanet.h">
+      <Filter>Header Files\ckCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CSolarSystem.h">
+      <Filter>Header Files\ckCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CSun.h">
+      <Filter>Header Files\ckCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CBody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CUniverse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimer.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

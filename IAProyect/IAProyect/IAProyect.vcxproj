@@ -128,23 +128,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CBody.cpp" />
     <ClCompile Include="CBoid.cpp" />
     <ClCompile Include="CLevelEditor.cpp" />
     <ClCompile Include="CManager.cpp" />
     <ClCompile Include="CMathCHK.cpp" />
+    <ClCompile Include="CPlanet.cpp" />
     <ClCompile Include="CShapes.cpp" />
+    <ClCompile Include="CSolarSystem.cpp" />
+    <ClCompile Include="CSun.cpp" />
     <ClCompile Include="CText.cpp" />
     <ClCompile Include="CTexture.cpp" />
+    <ClCompile Include="CTimer.cpp" />
+    <ClCompile Include="CUniverse.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CBody.h" />
     <ClInclude Include="CBoid.h" />
     <ClInclude Include="CLevelEditor.h" />
     <ClInclude Include="CManager.h" />
     <ClInclude Include="CMathCHK.h" />
+    <ClInclude Include="CPlanet.h" />
     <ClInclude Include="CShapes.h" />
+    <ClInclude Include="CSolarSystem.h" />
+    <ClInclude Include="CSun.h" />
     <ClInclude Include="CText.h" />
     <ClInclude Include="CTexture.h" />
+    <ClInclude Include="CTimer.h" />
+    <ClInclude Include="CUniverse.h" />
     <ClInclude Include="Header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

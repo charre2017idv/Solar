@@ -16,7 +16,7 @@ public:
 public:
 	void Init(SHAPES shape, sf::Color shapeColor, float radius, float x, float y, float originX, float originY);
 	void Destroy();
-	void Update();
+	void Update(Vector2 newPos);
 	void Render(sf::RenderWindow &Wnd, sf::Transform & transform);
 };
 

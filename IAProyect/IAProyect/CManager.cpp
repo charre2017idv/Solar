@@ -139,7 +139,7 @@ void CManager::initWindow()
 		"Steering Behaviors");
   cout << "-----------------------------------" << endl;
 	cout << "InitWindow() is initialized." << endl;
-  sf::Vector2u size = { 400,400 };
+  sf::Vector2u size = { 1280,720 };
   m_RenderWindow.setSize(size);
 }
 
