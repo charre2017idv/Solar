@@ -136,7 +136,7 @@ void CManager::initWindow()
 {
 	m_RenderWindow.create(
 		sf::VideoMode(1920, 1080),
-		"Steering Behaviors");
+		"Sistema Solar");
   cout << "-----------------------------------" << endl;
 	cout << "InitWindow() is initialized." << endl;
   sf::Vector2u size = { 1280,720 };

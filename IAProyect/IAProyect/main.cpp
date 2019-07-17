@@ -6,6 +6,7 @@
 
 #include "CTimer.h"
 #define RANGE 50.0f
+float g_zoom=1;
 float g_speed = 100;
 float g_speedZoom = 0.2;
 CManager _MANAGER;
@@ -21,7 +22,7 @@ sf::Texture BGTex;
 sf::Sprite BGSprite;
 sf::Texture MouseTex;
 sf::Sprite MouseSprite;
-
+Vector2 origenSun;
  ofstream NodesDatafile;
 
  vector<Vector2> PlanetCoords;
@@ -30,13 +31,14 @@ sf::Sprite MouseSprite;
 
  CUniverse SistemaSolar;
  CTimer Timer;
-
+ sf::View g_view(sf::FloatRect(0,0,1920,1080));
  void zoom(const float &speed);
  void move(const float &speed, const float &dirX, const float &diry);
 
 
 void update()
 {
+
   SistemaSolar.Update(Timer.GetDeltaTime());
   SistemaSolar.Render(_MANAGER.m_RenderWindow);
 //   for (size_t i = 0; i < PlanetCoords.size(); i++)
@@ -251,11 +253,11 @@ void EventHandler()
     exit(1);
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right))
   {
-    move(g_speed, -1, 0);
+    move(g_speed, 1, 0);
   }
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left))
   {
-    move(g_speed, 1, 0);
+    move(g_speed, -1, 0);
   }
   if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up))
   {
@@ -273,6 +275,22 @@ void EventHandler()
   {
     zoom(0.8);
   }
+  if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z))
+  {
+    SistemaSolar.m_SUN.Circle.m_radius -= 2;
+    for (int i = 0; i < SistemaSolar.m_SUN.m_children.size(); i++)
+    {
+      SistemaSolar.m_SUN.m_children[i].Circle.m_radius -= 2;
+    }
+  }
+  if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::X))
+  {
+    SistemaSolar.m_SUN.Circle.m_radius += 2;
+    for (int i = 0; i < SistemaSolar.m_SUN.m_children.size(); i++)
+    {
+      SistemaSolar.m_SUN.m_children[i].Circle.m_radius += 2;
+    }
+  }
 }
 
 int main()
@@ -285,6 +303,8 @@ int main()
 //   Vector2 jupiterPos = { 7783, 0 };
  	_MANAGER.initWindow();
   SistemaSolar.Init();
+  origenSun = SistemaSolar.m_SUN.m_pos;
+  g_view.setCenter(sf::Vector2f(0, 0));
 // 	//_MANAGER.Init();
 //   /////////////////////////////////////////
 //   // Sol
@@ -316,9 +336,12 @@ int main()
 //   PlanetCoords.push_back(_MANAGER.Mathlib.Add(sunPos, jupiterPos));
 //   planetSize.push_back(.71492f);
 //   PlanetColor.push_back(sf::Color(255, 204, 0));
+
+  
+
   Timer.start();
 	float timer = 0;
-	//_MANAGER.m_RenderWindow.setFramerateLimit(60);
+	_MANAGER.m_RenderWindow.setFramerateLimit(60);
 	while (_MANAGER.m_RenderWindow.isOpen())
 	{
 		while (_MANAGER.m_RenderWindow.pollEvent(_MANAGER.m_Event))
@@ -335,6 +358,7 @@ int main()
 			}
       EventHandler();
 		}
+    _MANAGER.m_RenderWindow.setView(g_view);
 		_MANAGER.m_RenderWindow.clear();
 	  update();
     int x = sf::Mouse::getPosition(_MANAGER.m_RenderWindow).x;
@@ -349,26 +373,35 @@ int main()
 
 void zoom(const float &speed)
 {
-  for (size_t i = 0; i < PlanetCoords.size(); i++)
-  {
-    //PlanetCoords[i].X += speed;
-    //PlanetCoords[i].Y += speed;
-    float sizeAnte = planetSize[i];
-    float speedAnte = g_speed;
-    float planetCoordx = PlanetCoords[i].X;
-    float planetCoordy = PlanetCoords[i].Y;
-
-    planetSize[i] = sizeAnte*speed;
-    PlanetCoords[i].X = planetCoordx * speed;
-    //PlanetCoords[i].Y = planetCoordy * speed;
-    //g_speed = speedAnte * speed;
-  }
+  //float sizeAnte = SistemaSolar.m_SUN.m_circleRadius;
+  //SistemaSolar.m_SUN.m_circleRadius = sizeAnte * speed;
+  //
+  //
+  //
+  //cout << SistemaSolar.m_SUN.m_circleRadius<< "\n";
+  //for (size_t i = 0; i < PlanetCoords.size(); i++)
+  //{
+  //  //PlanetCoords[i].X += speed;
+  //  //PlanetCoords[i].Y += speed;
+  //  float sizeAnte = planetSize[i];
+  //  float speedAnte = g_speed;
+  //  float planetCoordx = PlanetCoords[i].X;
+  //  float planetCoordy = PlanetCoords[i].Y;
+  //
+  //  planetSize[i] = sizeAnte * speed;
+  //  PlanetCoords[i].X = planetCoordx * speed;
+  //  //PlanetCoords[i].Y = planetCoordy * speed;
+  //  //g_speed = speedAnte * speed;
+  //}
+  g_zoom += speed;
+  g_view.zoom(speed);
+  cout << g_zoom << "\n";
 }
 void move(const float &speed, const float &dirX, const float &diry)
 {
-  for (size_t i = 0; i < PlanetCoords.size(); i++)
-  {
-    PlanetCoords[i].X += dirX * speed;
-    PlanetCoords[i].Y += diry * speed;
-  }
+  //SistemaSolar.m_centroUniverse.X += dirX * speed;
+  //SistemaSolar.m_centroUniverse.Y += diry * speed;
+  //cout << SistemaSolar.m_centroUniverse.X << " , " << SistemaSolar.m_centroUniverse.Y << "\n";
+  //SistemaSolar.m_SUN.m_pos = SistemaSolar.Math.Add(origenSun, SistemaSolar.m_centroUniverse);
+  g_view.move(dirX*speed, diry*speed);
 }

@@ -1,2 +1,46 @@
 ﻿  CBody.cpp
+  CBoid.cpp
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cboid.cpp(41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cboid.cpp(261): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cboid.cpp(294): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cboid.cpp(317): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cboid.cpp(405): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cboid.cpp(407): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cboid.cpp(423): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cboid.cpp(423): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cboid.cpp(475): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cboid.cpp(490): warning C4018: '>=': signed/unsigned mismatch
+  CLevelEditor.cpp
+  CManager.cpp
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cmanager.cpp(42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cmanager.cpp(43): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  CMathCHK.cpp
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cmathchk.cpp(17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cmathchk.cpp(18): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cmathchk.cpp(50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cmathchk.cpp(92): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  CPlanet.cpp
+  CShapes.cpp
+  CSolarSystem.cpp
+  CSun.cpp
+  CText.cpp
+  CTexture.cpp
+  CTimer.cpp
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\ctimer.h(18): warning C4091: 'static ': ignored on left of 'CTimer' when no variable is declared
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\ctimer.cpp(16): warning C4244: 'return': conversion from '_Rep' to 'float', possible loss of data
+          with
+          [
+              _Rep=double
+          ]
+  CUniverse.cpp
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cuniverse.cpp(106): warning C4018: '<': signed/unsigned mismatch
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\cuniverse.cpp(119): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\ctimer.h(18): warning C4091: 'static ': ignored on left of 'CTimer' when no variable is declared
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\main.cpp(11): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\main.cpp(272): warning C4305: 'argument': truncation from 'double' to 'const float'
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\main.cpp(276): warning C4305: 'argument': truncation from 'double' to 'const float'
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\main.cpp(281): warning C4018: '<': signed/unsigned mismatch
+c:\users\personal\documents\github\solar\iaproyect\iaproyect\main.cpp(289): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   IAProyect.vcxproj -> C:\Users\personal\Documents\GitHub\Solar\IAProyect\Debug\IAProyect.exe

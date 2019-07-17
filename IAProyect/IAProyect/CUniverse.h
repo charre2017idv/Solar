@@ -1,12 +1,15 @@
 #pragma once
 #include "Header.h"
 #include "CBody.h"
+#include "CMathCHK.h"
 class CUniverse
 {
 public:
   CUniverse();
   ~CUniverse();
 public:
+  CMathCHK Math;
+  int tempRatio ;
   /////////////////////////////////////////
   // Sun
   CBody m_SUN;
@@ -20,6 +23,7 @@ public:
   Vector2 m_earthPos = { 1496, 0 };
   Vector2 m_marsPos = { 2279, 0 };
   Vector2 m_jupiterPos = { 7783, 0 };
+  Vector2 m_centroUniverse = {0,0};
 public:
   void
   Init();
